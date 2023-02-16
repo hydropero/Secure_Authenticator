@@ -11,3 +11,23 @@
 <br>
 
 #### Usage: The -h switch when executing either of the tools (apisee or auth) will provide examples and context for their use.
+
+Below are examples of how the apisee tool is used.
+
+
+## Get help with documentation on how to use parameters
+<code>./apisee -h</code>
+<img src="https://github.com/hydropero/images/blob/main/apisee_help.png?raw=true">
+
+## Retrieval items from database as a table
+<code>./apisee -r 'ALL'</code>
+<img src="https://github.com/hydropero/images/blob/main/apisee_output.png?raw=true"  width="50%" height="25%">
+
+<br>
+
+## Retrieve single value from database by referencing it's name
+<code>./apisee -t 'APIKEY -r 'github'</code>
+<img src="[https://github.com/hydropero/images/blob/main/apisee_output.png?raw=true](https://github.com/hydropero/images/blob/main/apisee_getitem.png?raw=true)"  width="50%" height="25%">
+
+
+

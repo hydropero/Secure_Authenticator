@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/opt/homebrew/Cellar/bash/5.2.15/bin/bash
 
 help()
 {

@@ -30,8 +30,8 @@ help()
 }
 encrypt_file()
 {
-    openssl enc -aes-256-cbc -md sha512 -iter 100000 -salt -in $FILE_TO_ENCRYPT -out ${FILE_TO_ENCRYPT}.enc -pass file:$HOME_VAR/.ssh/${KEY_NAME} && \
-    rm ${SECUREAUTHPATH}/API_DB
+    openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt -in $FILE_TO_ENCRYPT -out ${FILE_TO_ENCRYPT}.enc -pass file:$HOME/.ssh/${KEY_NAME} && \
+    rm API_DB
 }
 
 decrypt_file()
@@ -39,11 +39,11 @@ decrypt_file()
     if [  -n "$O_OPTION" ]
         then
             FILE_NO_EXT=$(echo "${FILE_TO_DECRYPT%.*}")
-            openssl enc -aes-256-cbc -md sha512 -iter 100000 -salt -d -in ${FILE_TO_DECRYPT} -out ${FILE_NO_EXT} -pass file:$HOME/.ssh/auth.key && \
-            rm ${SECUREAUTHPATH}/API_DB.enc
+            openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt -d -in ${FILE_TO_DECRYPT} -out ${FILE_NO_EXT} -pass file:$HOME/.ssh/auth.key && \
+            rm API_DB.enc
 
         else
-            openssl enc -aes-256-cbc -md sha512 -iter 100000 -salt -d -in ${FILE_TO_DECRYPT} -pass file:$HOME_VAR/.ssh/${KEY_NAME}
+            openssl enc -aes-256-cbc -md sha512 -pbkdf2 -salt -d -in ${FILE_TO_DECRYPT} -pass file:$HOME/.ssh/${KEY_NAME}
     fi
 }
 

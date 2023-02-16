@@ -14,6 +14,7 @@
 
 Below are examples of how the apisee tool is used.
 
+<br>
 
 ## Get help with documentation on how to use parameters
 <code>./apisee -h</code>

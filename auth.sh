@@ -83,9 +83,6 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 BLUE='\033[0;34m'
 
-# SECUREAUTHPATH='/bolton/bitbucket/bol-scripts/secureauth'  #   PROD
-SECUREAUTHPATH='/home/mbulla/Repos/bol-scripts/secureauth'   #   TESTING
-
 while getopts ":che:od:" option
 do
     case $option in
